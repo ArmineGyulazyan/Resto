@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{menu}}</title>
+    <style>
+        .category {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align:center">Select a specific category</h1>
+    <div>
+        {% for category in menu_typee.categories %}
+            <div class="category"  onclick="window.location.href='/category/{{ category_type }}/{{ category.category_name | replace(' ', '_') }}'">
+                {{ category.category_name }}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

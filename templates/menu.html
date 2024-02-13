@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Categories</title>
+    <style>
+        .category {
+            cursor: pointer;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Welcome to our restaurant</h1>
+    <h1 style="text-align:center">Select a category</h1>
+    <div>
+        {% for menu in menus %}
+            <div class="category" onclick="window.location.href='/category/{{menu.type_name}}'">
+                {{menu.type_name}}
+            </div>
+        {%endfor%}
+    </div>
+</body>
+</html>

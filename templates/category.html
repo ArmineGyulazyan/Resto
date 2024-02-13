@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{specific_dishes}}</title>
+    <style>
+        .spec_item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: block
+        }
+    </style>
+</head>
+<body>
+<h1>{{specific_dishes | replace('_', ' ') | title}}</h1>
+<ul>
+    {% for spec_item in specifics %}
+        <div class="spec_item">
+            <h2>{{ spec_item.name }}</h2>
+            <p>Ingredients: {{ spec_item.ingredients }}</p>
+            <p>Price: {{ spec_item.price }}</p>
+        </div>
+    {%endfor%}
+</ul>
+</body>
+</html>
