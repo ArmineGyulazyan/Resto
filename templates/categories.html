@@ -16,7 +16,7 @@
 <h1 style="text-align:center">Select a specific category</h1>
     <div>
         {% for category in menu_typee.categories %}
-            <div class="category"  onclick="window.location.href='/category/{{ category_type }}/{{ category.category_name | replace(' ', '_') }}'">
+            <div class="category"  onclick="window.location.href='/category/{{ category_type }}/{{ category.category_name }}'">
                 {{ category.category_name }}
             </div>
         {% endfor %}
